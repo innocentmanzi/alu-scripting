@@ -8,7 +8,6 @@ the function should return None.
 
 import requests
 
-
 def recurse(subreddit, hot_list=[], after=""):
     """
     Queries the Reddit API and returns
