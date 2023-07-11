@@ -2,7 +2,9 @@
 
 import requests
 
+
 def recurse(subreddit, hot_list=[], after=""):
+
     req = requests.get(
         "https://www.reddit.com/r/{}/hot.json".format(subreddit),
         headers={"User-Agent": "Custom"},
@@ -22,4 +24,3 @@ def recurse(subreddit, hot_list=[], after=""):
             return recurse(subreddit, hot_list, after)
     else:
         return None
-
